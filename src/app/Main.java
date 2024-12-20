@@ -23,5 +23,14 @@ public class Main {
         int arrLength = array.length;
         System.out.println("\n1) Elements of array: " + Arrays.toString(array));
         System.out.println("2) Array length is " + arrLength);
+
+        sumNegativeValues = 0;
+
+        for (double num : array) {
+            if (num < 0) {
+                sumNegativeValues += num;
+            }
+        }
+        System.out.println("\n3) The sum of negative numbers is " + sumNegativeValues);
     }
 }
