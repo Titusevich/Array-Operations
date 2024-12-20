@@ -59,5 +59,25 @@ public class Main {
                 " (index: " + minIndex + ")");
         System.out.println("Maximum number is " + maxElement +
                 " (index: " + maxIndex + ")");
+
+        findNegativeValues = false;
+        summa = 0;
+        countElements = 0;
+        double average;
+
+        for (int i = 0; i < array.length; i++) {
+            if (findNegativeValues) {
+                summa += array[i];
+                countElements++;
+            } else if (array[i] < 0) {
+                findNegativeValues = true;
+            }
+        }
+        if (countElements > 0) {
+            average = summa / countElements;
+
+            System.out.printf("%n6) Arithmetic average after the first negative number " +
+                    "is %.2f%n", average);
+        } else System.out.println("There are no negative numbers");
     }
 }
