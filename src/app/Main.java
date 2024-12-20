@@ -25,12 +25,19 @@ public class Main {
         System.out.println("2) Array length is " + arrLength);
 
         sumNegativeValues = 0;
+        countEvenNumbers = 0;
+        countOddNumbers = 0;
 
         for (double num : array) {
             if (num < 0) {
                 sumNegativeValues += num;
             }
+            if (num % 2 == 0) {
+                countEvenNumbers++;
+            } else countOddNumbers++;
         }
         System.out.println("\n3) The sum of negative numbers is " + sumNegativeValues);
+        System.out.println("\n4) Amount of even numbers is " + countEvenNumbers);
+        System.out.println("Amount of odd numbers is " + countOddNumbers);
     }
 }
