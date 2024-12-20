@@ -39,5 +39,25 @@ public class Main {
         System.out.println("\n3) The sum of negative numbers is " + sumNegativeValues);
         System.out.println("\n4) Amount of even numbers is " + countEvenNumbers);
         System.out.println("Amount of odd numbers is " + countOddNumbers);
+
+        minElement = array[0];
+        maxElement = array[0];
+        maxIndex = 0;
+        minIndex = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < minElement) {
+                minElement = array[i];
+                minIndex = i;
+            }
+            if (array[i] > maxElement) {
+                maxElement = array[i];
+                maxIndex = i;
+            }
+        }
+        System.out.println("\n5) Minimum number is " + minElement +
+                " (index: " + minIndex + ")");
+        System.out.println("Maximum number is " + maxElement +
+                " (index: " + maxIndex + ")");
     }
 }
